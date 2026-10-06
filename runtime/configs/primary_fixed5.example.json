@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "experiment": "primary_fixed5",
+  "records": "metadata/records.jsonl",
+  "splits": "metadata/splits.json",
+  "seed": 42,
+  "encoder": {
+    "kind": "dinov2",
+    "weights": "weights/dinov2_vitb14.pth",
+    "weights_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "size": 518
+  },
+  "bank": {"ratios": [0.05], "top_percent": [3], "selection": "fixed"},
+  "refiner": {"mode": "rgb_heat", "base": 16, "epochs": 20, "loss": "bce_dice", "normalization": "per_image", "selection": "final"}
+}

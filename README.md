@@ -1,10 +1,19 @@
 # Railway Object-Aware Heatmap Refinement
 
 Compact PatchBank anomaly scoring and RGB-guided heatmap refinement for railway
-foreign-object inspection. The code keeps only the reusable method components:
+foreign-object inspection. Reusable method components include:
 DINOv2 patch-token extraction, component-specific normal PatchBank scoring,
 heatmap generation, and a compact U-Net-style refiner for converting anomaly
 responses into object-aware masks and boxes.
+
+## Training and Evaluation
+
+See [TRAINING.md](TRAINING.md) for grouped five-fold training with internal
+validation, the fixed 5% reference-bank/top-3% configuration, held-out inference,
+the common detection evaluator and heatmap-control utilities. These entry points
+are `split.py`, `train.py`, `infer.py`, `evaluate.py` and `heatmap_controls.py`.
+Their metadata format and dependencies are documented in that guide. The examples
+below describe the original lightweight method components in `src/` and `tools/`.
 
 ## Install
 
