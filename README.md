@@ -21,7 +21,10 @@ below describe the original lightweight method components in `src/` and `tools/`
 pip install -r requirements.txt
 export PYTHONPATH=$PWD/src:$PYTHONPATH
 ```
-
+## Reproducing the revision results
+Download `Reproducibility_Round2_With_DINOv2.zip` from the v2.0-revision2 release, extract it, and run inside `Reproducibility_Round2`:
+python reproduce_round2.py --evaluate
+       
 ## Expected Metadata
 
 Each JSONL row should at least provide:
