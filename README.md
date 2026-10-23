@@ -24,6 +24,7 @@ export PYTHONPATH=$PWD/src:$PYTHONPATH
 ## Reproducing the revision results
 Download `Reproducibility_Round2_With_DINOv2.zip` from the v3.0 release, extract it, and run inside `Reproducibility_Round2`:
 python reproduce_round2.py --evaluate
+
 Synthetic OOD compositing script: reproducibility/ood/
        
 ## Expected Metadata
